@@ -1,4 +1,5 @@
 // import type { Core } from '@strapi/strapi';
+import cronTasks from "../config/cron-tasks";
 
 export default {
   /**
@@ -16,5 +17,8 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+  bootstrap({ strapi }) {
+    // This tells Strapi to load your cron tasks
+    strapi.cron.add(cronTasks);
+  },
 };

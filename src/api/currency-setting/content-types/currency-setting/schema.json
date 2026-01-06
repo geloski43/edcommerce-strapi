@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "currency_settings",
+  "info": {
+    "singularName": "currency-setting",
+    "pluralName": "currency-settings",
+    "displayName": "Currency-Setting"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "symbol": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "isDefault": {
+      "type": "boolean"
+    },
+    "precision": {
+      "type": "integer",
+      "default": 2
+    }
+  }
+}
