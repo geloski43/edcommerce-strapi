@@ -1,4 +1,6 @@
-const frontendUrl = process.env.FRONTEND_URL || "http://localhost:8000";
+const frontendUrl =
+  process.env.FRONTEND_URL ||
+  "https://695cba001d16434c299703be--edcommerceapp.netlify.app";
 const secret = process.env.SYNC_SECRET;
 
 export default {
