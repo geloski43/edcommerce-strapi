@@ -1,7 +1,8 @@
 const frontendUrl =
-  process.env.FRONTEND_URL ||
-  "https://695cba001d16434c299703be--edcommerceapp.netlify.app";
-const secret = process.env.SYNC_SECRET;
+  process.env.FRONTEND_URL || "https://edcommerceapp.netlify.app";
+const secret =
+  process.env.SYNC_SECRET ||
+  "8066204e3a4545811818d97e883162b704f1ba928f6d4016f3964ea539bf1ec";
 
 export default {
   // TASK 1: Sync Categories
