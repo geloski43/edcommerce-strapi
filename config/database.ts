@@ -14,18 +14,16 @@ export default ({ env }) => {
           ? {
               // Neon / External Postgres Logic
               connectionString: env("DATABASE_URL"),
-              host: env("DATABASE_HOST"),
-              port: env.int("DATABASE_PORT", 5432),
-              database: env("DATABASE_NAME"),
-              user: env("DATABASE_USERNAME"),
-              password: env("DATABASE_PASSWORD"),
+              host: process.env.DATABASE_HOST,
+              port: process.env.DATABASE_PORT,
+              database: process.env.DATABASE_NAME,
+              user: process.env.DATABASE_USERNAME,
+              password: process.env.DATABASE_PASSWORD,
 
               // Critical for Neon and external providers
-              ssl: env.bool("DATABASE_SSL", true) && {
-                rejectUnauthorized: env.bool(
-                  "DATABASE_SSL_REJECT_UNAUTHORIZED",
-                  false,
-                ),
+              ssl: process.env.DATABASE_SSL && {
+                rejectUnauthorized:
+                  process.env.DATABASE_SSL_REJECT_UNAUTHORIZED,
               },
             }
           : {
