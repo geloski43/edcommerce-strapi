@@ -7,6 +7,7 @@ export default ({ env }) => {
   console.log("CLIENT:", process.env.DATABASE_CLIENT);
   console.log("HOST:", process.env.DATABASE_HOST);
   console.log("DB_NAME:", process.env.DATABASE_NAME);
+  console.log("API_TOKEN_SALT:", process.env.API_TOKEN_SALT);
   console.log("--- STRAPI DB DEBUG END ---");
 
   const connections = {
