@@ -19,13 +19,6 @@ export default {
    */
   bootstrap({ strapi }) {
     // This tells Strapi to load your cron tasks
-
-    console.log("########## RUNTIME DATABASE CHECK ##########");
-    console.log("DB Host:", process.env.DATABASE_HOST);
-    console.log("DB Name:", process.env.DATABASE_NAME);
-    console.log("DB Client:", process.env.DATABASE_CLIENT);
-    console.log("Using Connection String:", !!process.env.DATABASE_URL);
-    console.log("############################################");
     strapi.cron.add(cronTasks);
   },
 };

@@ -8,6 +8,15 @@ export default {
   syncCategories: {
     task: async () => {
       console.log("[CRON] Attempting Category sync...");
+
+      console.log("########## RUNTIME DATABASE CHECK Category sync ##########");
+      console.log("DB Host:", process.env.DATABASE_HOST);
+      console.log("DB Name:", process.env.DATABASE_NAME);
+      console.log("DB Client:", process.env.DATABASE_CLIENT);
+      console.log("FRONTEND_URL:", process.env.FRONTEND_URL);
+      console.log("Using Connection String:", process.env.DATABASE_URL);
+      console.log("############################################");
+
       try {
         const response = await fetch(`${frontendUrl}/api/sync/categories`, {
           method: "GET", // Explicitly define method

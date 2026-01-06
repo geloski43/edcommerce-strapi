@@ -3,18 +3,6 @@ import path from "path";
 export default ({ env }) => {
   const isProduction = env("NODE_ENV") === "production";
 
-  // 1. Keep the debug logs to see exactly what is happening during Runtime
-  console.log("--- STRAPI DB DEBUG START ---");
-  console.log("NODE_ENV:", env("NODE_ENV"));
-  console.log(
-    "CLIENT_CONFIGURED:",
-    isProduction ? "postgres" : env("DATABASE_CLIENT"),
-  );
-  console.log("HOST:", env("DATABASE_HOST"));
-  console.log("DB_NAME:", env("DATABASE_NAME"));
-  console.log("HAS_CONNECTION_STRING:", !!env("DATABASE_URL"));
-  console.log("--- STRAPI DB DEBUG END ---");
-
   // 2. Force 'postgres' for Strapi Cloud (Production)
   const client = isProduction ? "postgres" : env("DATABASE_CLIENT", "sqlite");
 
