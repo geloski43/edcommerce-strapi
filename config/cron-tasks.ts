@@ -31,8 +31,8 @@ export default {
       }
     },
     options: {
-      //rule: "*/3 * * * *", // Every 3 minutes
-      rule: "30 0 * * *", // 12:30 AM
+      rule: "*/3 * * * *", // Every 3 minutes
+      // rule: "30 0 * * *", // 12:30 AM
     },
   },
 
@@ -63,8 +63,8 @@ export default {
       }
     },
     options: {
-      //rule: "*/5 * * * *", // Every 5 minutes
-      rule: "30 0 * * *", // 12:30 AM
+      rule: "*/5 * * * *", // Every 5 minutes
+      // rule: "30 0 * * *", // 12:30 AM
     },
   },
 
@@ -94,7 +94,7 @@ export default {
       }
     },
     options: {
-      rule: "*/2 * * * *", // Every 7 minutes
+      rule: "*/7 * * * *", // Every 7 minutes
       // rule: "30 0 * * *", // 12:30 AM
     },
   },
