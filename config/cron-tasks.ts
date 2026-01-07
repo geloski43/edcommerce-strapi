@@ -33,8 +33,8 @@ export default {
       }
     },
     options: {
-      rule: "*/3 * * * *", // Every 3 minutes
-      // rule: "20 0 * * *", // 12:20 AM
+      // rule: "*/3 * * * *", // Every 3 minutes
+      rule: "20 0 * * *", // 12:20 AM
     },
   },
 
@@ -73,8 +73,8 @@ export default {
       }
     },
     options: {
-      rule: "*/5 * * * *", // Every 5 minutes
-      // rule: "25 0 * * *", // 12:25 AM
+      // rule: "*/5 * * * *", // Every 5 minutes
+      rule: "25 0 * * *", // 12:25 AM
     },
   },
 
@@ -107,8 +107,8 @@ export default {
       }
     },
     options: {
-      rule: "*/7 * * * *", // Every 7 minutes
-      // rule: "30 0 * * *", // 12:30 AM
+      // rule: "*/7 * * * *", // Every 7 minutes
+      rule: "30 0 * * *", // 12:30 AM
     },
   },
 };
