@@ -1,14 +1,14 @@
-const frontendUrl =
-  process.env.FRONTEND_URL || "https://edcommerceapp.netlify.app";
-const secret =
-  process.env.SYNC_SECRET ||
-  "8066204e3a4545811818d97e883162b704f1ba928f6d4016f3964ea539bf1ec";
+const frontendUrl = process.env.FRONTEND_URL;
+const secret = process.env.SYNC_SECRET;
 
 export default {
   // TASK 1: Sync Categories
   syncCategories: {
     task: async () => {
-      console.log("[CRON] Attempting Category sync...");
+      console.log(
+        "[CRON] Attempting Category sync... frontendUrl-",
+        frontendUrl,
+      );
 
       try {
         const response = await fetch(`${frontendUrl}/api/sync/categories`, {
@@ -33,15 +33,18 @@ export default {
       }
     },
     options: {
-      // rule: "*/3 * * * *", // Every 3 minutes
-      rule: "20 0 * * *", // 12:20 AM
+      rule: "*/3 * * * *", // Every 3 minutes
+      // rule: "20 0 * * *", // 12:20 AM
     },
   },
 
   // TASK 2: Sync Sub-Categories
   syncSubCategories: {
     task: async () => {
-      console.log("[CRON] Attempting Sub-Category sync...");
+      console.log(
+        "[CRON] Attempting Sub-Category sync... frontendUrl-",
+        frontendUrl,
+      );
 
       try {
         const response = await fetch(`${frontendUrl}/api/sync/subcategories`, {
@@ -70,15 +73,18 @@ export default {
       }
     },
     options: {
-      // rule: "*/5 * * * *", // Every 5 minutes
-      rule: "25 0 * * *", // 12:25 AM
+      rule: "*/5 * * * *", // Every 5 minutes
+      // rule: "25 0 * * *", // 12:25 AM
     },
   },
 
   // TASK 3: Sync Products
   syncProducts: {
     task: async () => {
-      console.log("[CRON] Attempting Product sync...");
+      console.log(
+        "[CRON] Attempting Product sync... frontendUrl-",
+        frontendUrl,
+      );
       try {
         const response = await fetch(`${frontendUrl}/api/sync/products`, {
           method: "GET",
@@ -101,8 +107,8 @@ export default {
       }
     },
     options: {
-      // rule: "*/7 * * * *", // Every 7 minutes
-      rule: "30 0 * * *", // 12:30 AM
+      rule: "*/7 * * * *", // Every 7 minutes
+      // rule: "30 0 * * *", // 12:30 AM
     },
   },
 };
